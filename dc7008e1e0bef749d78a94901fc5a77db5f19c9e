@@ -1,0 +1,31 @@
+Improve git-pull's option parsing
+
+Previous versions:
+
+[v1] http://thread.gmane.org/gmane.comp.version-control.git/269249
+
+This patch series is based on pt/pull-tests.
+
+While parsing the command-line arguments, git-pull stops parsing at the
+first unrecognized option, assuming that any subsequent options are for
+git-fetch, and can thus be kept in the shell's positional parameters
+list, so that it can be passed to git-fetch via the expansion of "$ <at>
+".
+
+However, certain functions in git-pull assume that the positional
+parameters do not contain any options. Fix this by making git-pull
+handle git-fetch's options as well at the option parsing stage.
+
+With this change in place, we can move on to migrate git-pull to use
+git-rev-parse --parseopt such that its option parsing is consistent with
+the other git commands.
+
+I believe this is the last required behavior change for my rewrite of
+git-pull.sh to C.
+
+v2
+
+* Initialize variables to prevent them from being set in the command
+  line.
+
+* Update the documentation as well.
