@@ -1,0 +1,5 @@
+v2
+
+* use die_errno()
+
+* use '%*d' as the format specifier for msgnum()
