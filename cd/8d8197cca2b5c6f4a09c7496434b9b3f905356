@@ -1,0 +1,3 @@
+v2
+
+* Declare struct am_state state as static.
