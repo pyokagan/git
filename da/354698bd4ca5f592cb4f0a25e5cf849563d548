@@ -1,0 +1,7 @@
+v2
+
+* Previously implemented as a static function in builtin/pull.c. It now
+  uses an strbuf instead of returning newly-allocated strings, to make
+  memory management easier.
+
+* We don't use defval anymore. Instead, we use long_name and short_name.
