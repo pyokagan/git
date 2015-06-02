@@ -19,3 +19,6 @@ v2
 * get_merge_branch_2() has been renamed to get_tracking_branch() to
   indicate what it is doing: deriving the remote tracking branch from
   the refspec.
+
+* Various small variable re-names and docstring tweaks. Hopefully
+* everything reads better now.
