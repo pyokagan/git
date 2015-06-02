@@ -1,0 +1,6 @@
+v2
+
+* This function is a requirement for the rewrite of git-am to handle
+  passing git-apply's options to git-apply. Since it would be
+  implemented anyway I thought it would be good if git-pull could take
+  advantage of it as well to handle --strategy and --strategy-option.
