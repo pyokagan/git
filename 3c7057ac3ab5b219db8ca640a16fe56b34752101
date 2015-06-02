@@ -2,3 +2,5 @@ v2
 
 * Initialize variables to prevent them from being set in the command
   line.
+
+* Update the documentation as well.
