@@ -1,0 +1,4 @@
+v2
+
+* Use opt_parse_pass_strbuf(), opt_parse_pass_argv_array() and
+  argv_array_pushv()
