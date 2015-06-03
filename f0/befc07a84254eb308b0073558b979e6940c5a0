@@ -1,0 +1,4 @@
+v2
+
+* Decided to use fprintf_ln() for the sake of code consistency, and for
+  the added trailing newline.
