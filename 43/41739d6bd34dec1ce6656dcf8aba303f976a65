@@ -1,0 +1,3 @@
+v2
+
+* Use parse_opt_pass_strbuf().
