@@ -1,3 +1,5 @@
 v2
 
 * Declare int opt_patchformat as static.
+
+* Fix up indentation style for the switch()
