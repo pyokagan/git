@@ -4,5 +4,4 @@ v2
   uses an strbuf instead of returning newly-allocated strings, to make
   memory management easier.
 
-* defval is now optional. If defval is not provided, we fall back to
-  long_name, and then short_name.
+* We don't use defval anymore. Instead, we use long_name and short_name.
