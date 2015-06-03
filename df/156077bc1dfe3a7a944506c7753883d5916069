@@ -1,0 +1,8 @@
+v2
+
+* Switched to using fprintf_ln() which will append the trailing newline
+  at the end for us.
+
+* The die_no_merge_candidates() code has been reorganized a bit to
+  support the later patch which will tweak the messages to be aware of
+  git-pull --rebase.
