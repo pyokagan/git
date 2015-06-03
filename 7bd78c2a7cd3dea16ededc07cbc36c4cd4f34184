@@ -1,0 +1,11 @@
+v2
+
+* Previously, config_get_rebase() attempted to do too many things. It:
+
+  1. Checked if there was a configuration for
+     branch.$curr_branch.rebase, and if not, then pull.rebase
+
+  2. Parsed the configuration value and died if the value is invalid.
+
+  These 2 functions have been split into config_get_rebase_default() and
+  config_get_rebase() respectively.
