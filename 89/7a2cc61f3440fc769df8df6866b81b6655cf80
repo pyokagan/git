@@ -1,0 +1,24 @@
+v2
+
+* enum rebase_type gained a new value REBASE_INVALID = -1 to represent
+  invalid values passed to --rebase. We can't immediately die() on
+  invalid values because we need parse_options() to show the git-pull
+  usage as well.
+
+* parse_config_rebase() now returns an enum rebase_type to make it clear
+  what kind of value it returns.
+
+* parse_config_rebase() now does not depend on git_config_maybe_bool()
+  returning 1 for true and 0 for false. If it returns 0, it is
+  REBASE_FALSE. If it returns any true value >=0, it is interpreted as
+  REBASE_TRUE.
+
+* get_merge_branch_1() has been renamed to get_upstream_branch() to be
+  consistent with the similar get_upstream_branch() in sha1_name.c.
+
+* get_merge_branch_2() has been renamed to get_tracking_branch() to
+  indicate what it is doing: deriving the remote tracking branch from
+  the refspec.
+
+* Various small variable re-names and docstring tweaks. Hopefully
+  everything reads better now.
